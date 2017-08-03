@@ -61,14 +61,14 @@ def move_group_python_interface_tutorial():
                                0.0)         # jump_threshold
                                
   print "============ Waiting while RVIZ displays plan3..."
-  rospy.sleep(5)
+  rospy.sleep(3)
 
   # Uncomment the line below to execute this plan on a real robot.
   # I'm doing it because in the previous examples of only using plan()
   # RViz always references the default robot state for the move and
   # it isn't updated. I wanted to find out what the end position really was
   group.execute(plan3)
-  rospy.sleep(10)
+  rospy.sleep(5)
   
   print '========== state after cartesian: %s' % group.get_current_pose()
   
